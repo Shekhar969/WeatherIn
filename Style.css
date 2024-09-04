@@ -9,11 +9,33 @@
 
 body{
     display: grid;
-    height: 100dvh;
     justify-content: center;
     align-content: center;  
 }
 
 h1{
     font-size: 50px;
+    margin: 50px    ;
+    color: rgb(122, 201, 201)   ;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+input,button{
+    font-size: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    scale: 1.2;
+    animation: ease-in-out 8s;
+    padding: 0 10px;
+    border-radius: 30px;
+    background-color: rgb(237, 245, 245);
+    box-shadow: 0 0 20px rgb(224, 224, 152);
 }
