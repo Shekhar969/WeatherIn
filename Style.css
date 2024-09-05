@@ -61,7 +61,7 @@ h1{
 
 input,button{
     font-size: 25px;
-    
+    background: none;
 }
 #info{
     margin: 90px 20px;

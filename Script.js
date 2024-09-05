@@ -10,7 +10,12 @@ Btn.addEventListener("click", () => {
   const urlCall = `https://api.openweathermap.org/data/2.5/weather?q=${UserInputValue}&appid=${apiKey}`;
 
   fetch(urlCall)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new error(`Error In Reteriviting Data`);
+      }
+      return response.json();
+    })
     .then((data) => {
       console.log(data);
       const tempCelsius = (data.main.temp - 273.15).toFixed(1);
@@ -24,5 +29,9 @@ Btn.addEventListener("click", () => {
 
 
 `;
+    })
+    .catch((error) => {
+      console.error("error Fetching Weather:", error)
+      (inFo.innerHTML = ` <p>  Abba K Vo k YO Laiiiii </p>`)
     });
 });
