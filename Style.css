@@ -15,7 +15,7 @@ body{
 
 h1{
     font-size: 50px;
-    margin: 50px    ;
+    margin: 50px;
     color: rgb(122, 201, 201)   ;
 }
 
@@ -52,4 +52,23 @@ button:hover{
     font-size: 35px;
     padding: 10px 0;
     
+}   
+@media (max-width:500px ){
+h1{
+    font-size: 40px;
+    margin: 50px auto;
+}
+
+input,button{
+    font-size: 25px;
+    
+}
+#info{
+    margin: 90px 20px;
+    padding: 30px;
+}
+
+#info p{
+    font-size: 30px;
+}
 }
