@@ -5,12 +5,18 @@ const apiKey="0d94baf1cb9fb0f9165274c3f5c42ee2";
 
 
 Btn.addEventListener("click" , ()=>{
-    UserInputvalue =UserInput.value;
-    // console.log(UserInputvalue)
+    let UserInputValue = UserInput.value.trim();
+    UserInputValue = encodeURIComponent(UserInputValue);
 
-    fetch="https://api.openweathermap.org/data/2.5/weather?q=${UserInputvalue}&appid=0d94baf1cb9fb0f9165274c3f5c42ee2"
-    .then(Response => Response.json())
-    .then(data =>{
-        inFo.innerHTML=data;
+
+    const urlCall =`https://api.openweathermap.org/data/2.5/weather?q=${UserInputValue}&appid=${apiKey}`;
+
+    fetch(urlCall)
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data)
+
+        
+
     })
 })
